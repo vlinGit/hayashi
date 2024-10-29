@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Night In Tokyo';
+  src: url(./night-in-tokyo/NightinTokyo.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Night In Tokyo';
+  src: url(./night-in-tokyo/NightinTokyo-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('@/assets/DM_Sans/static/DMSans-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('@/assets/DM_Sans/static/DMSans-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('@/assets/DM_Sans/static/DMSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('@/assets/DM_Sans/static/DMSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+body {
+  font-family: 'DM Sans';
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0 auto;
+  color: #f5f3ec;
+  overflow-x: hidden;
+}
