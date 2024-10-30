@@ -45,8 +45,20 @@ body {
   color: #f5f3ec;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1600px) {
   body {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: clamp(5px, 1.5vw, 8px);
   }
 }

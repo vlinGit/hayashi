@@ -1,7 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
     <div class="wrapper">
@@ -23,12 +19,42 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <RouterView />
+
+  <div class="footer">
+    
+  </div>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+import border from '@/assets/borders.svg'
+
+const onScroll = () => {
+  console.log("scrolled")
+  const wrapper = document.querySelector('.wrapper');
+  console.log(wrapper);
+  if (window.scrollY > 0) {
+    wrapper.classList.add('scrolled');
+  } else {
+    wrapper.classList.remove('scrolled');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll);
+})
+</script>
+
 <style scoped>
+.scrolled{
+  background-color: rgb(18, 52, 97, 1) !important;
+}
+
 header{
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .wrapper{
@@ -37,6 +63,7 @@ header{
   gap: 10px;
   background-color: rgb(18, 52, 97, 0.6);
   padding: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .contact{
@@ -47,7 +74,7 @@ header{
   color: #f5f3ec;
 
   a{
-    font-size: 1em;
+    font-size: clamp(12px, 1em, 32px);
     text-shadow: none;
     margin: 0;
     text-decoration: none;
@@ -72,10 +99,24 @@ a {
   transition: background-size 0.2s ease-in-out;
   text-transform: uppercase;
   text-shadow: 0 4px 0px rgba(0, 0, 0, 0.45);
-  font-size: 1.5em;
+  font-size: clamp(16px, 1.5em, 32px);
 }
 
 a:hover{
   background-size: 100% 0.1em;
+}
+
+.footer{
+  
+}
+
+.footer::before{
+  content: '';
+  background-image: url('assets/borders.svg');
+  transform: rotate(180deg);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100px;
 }
 </style>
