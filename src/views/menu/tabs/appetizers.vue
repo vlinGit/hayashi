@@ -152,7 +152,7 @@ const sections = [
             {
                 name: 'Takoyaki(6)',
                 description: 'Deep-fried tako ball',
-                price: '8'
+                price: '9'
             },
             {
                 name: 'Age Chicken',
@@ -185,7 +185,12 @@ const sections = [
                 price: '17'
             },
             {
-                name: 'Beef and Chicken Negimaki',
+                name: 'Cheese Cracker',
+                description: '',
+                price: '10'
+            },
+            {
+                name: 'Beef or Chicken Negimaki',
                 description: 'Sliced beef or chicken rolled w. scallion & teriyaki sauce',
                 price: '11'
             },
@@ -195,7 +200,7 @@ const sections = [
                 price: '12'
             },
             {
-                name: 'Grilled Mussel',
+                name: 'Grilled Mussels',
                 description: 'Mussel w. Japanese mayo & caviar',
                 price: '12'
             },

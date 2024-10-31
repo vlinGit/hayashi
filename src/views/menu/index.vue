@@ -9,11 +9,26 @@
             </template>
         </Carousel>
         <transition name="slide-fade" mode="out-in" style="color: black">
-            <appetizers v-if="currentMenu == 0"/>
-            <alacarte v-else-if="currentMenu == 1"/>
-            <asianFusion v-else-if="currentMenu == 2"/>
-            <entree v-else-if="currentMenu == 3"/>
-            <friedrice v-else-if="currentMenu == 4"/>
+            <specialrolls v-if="currentMenu == 0"/>
+            <regularrolls v-else-if="currentMenu == 1"/>
+            <alacarte v-else-if="currentMenu == 2"/>
+            <lunch v-else-if="currentMenu == 3"/>
+            <entree v-else-if="currentMenu == 4"/>
+            <appetizers v-else-if="currentMenu == 5"/>
+            <bentobox v-else-if="currentMenu == 6"/>
+            <asianfusion v-else-if="currentMenu == 7"/>
+            <teriyaki v-else-if="currentMenu == 8"/>
+            <hibachi v-else-if="currentMenu == 9"/>
+            <tempura v-else-if="currentMenu == 10"/>
+            <donburi v-else-if="currentMenu == 11"/>
+            <padthainoodles v-else-if="currentMenu == 12"/>
+            <friedrice v-else-if="currentMenu == 13"/>
+            <noodles v-else-if="currentMenu == 14"/>
+            <partyplatter v-else-if="currentMenu == 15"/>
+            <soup v-else-if="currentMenu == 16"/>
+            <salads v-else-if="currentMenu == 17"/>
+            <dessert v-else-if="currentMenu == 18"/>
+            <drink v-else-if="currentMenu == 19"/>
         </transition>
     </div>
 </template>
@@ -24,56 +39,107 @@ import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 import appetizers from '@/views/menu/tabs/appetizers.vue';
 import alacarte from '@/views/menu/tabs/alacarte.vue';
-import asianFusion from '@/views/menu/tabs/asianFusion.vue';
+import asianfusion from '@/views/menu/tabs/asianFusion.vue';
 import entree from '@/views/menu/tabs/entree.vue';
+import soup from '@/views/menu/tabs/soup.vue';
+import specialrolls from '@/views/menu/tabs/specialrolls.vue';
+import regularrolls from '@/views/menu/tabs/regularrolls.vue';
+import bentobox from '@/views/menu/tabs/bentobox.vue';
+import teriyaki from '@/views/menu/tabs/teriyaki.vue';
+import hibachi from '@/views/menu/tabs/hibachi.vue';
+import tempura from '@/views/menu/tabs/tempura.vue';
+import donburi from '@/views/menu/tabs/donburi.vue';
+import padthainoodles from '@/views/menu/tabs/padthainoodles.vue';
 import friedrice from '@/views/menu/tabs/friedrice.vue';
+import noodles from '@/views/menu/tabs/noodles.vue';
+import partyplatter from '@/views/menu/tabs/partyplatter.vue';
+import salads from '@/views/menu/tabs/salads.vue';
+import dessert from '@/views/menu/tabs/dessert.vue';
+import drink from '@/views/menu/tabs/drink.vue';
+import lunch from '@/views/menu/tabs/lunch.vue';
 
 const currentMenu = ref(0);
 
 const menus = ref([
     {
         id: 0,
-        name: 'Menu Item 0'
+        name: 'Special Rolls'
     },
     {
         id: 1,
-        name: 'Menu Item 1'
+        name: 'Regular Rolls/Hand Rolls'
     },
     {
         id: 2,
-        name: 'Menu Item 2'
+        name: 'A La Carte'
     },
     {
         id: 3,
-        name: 'Menu Item 3'
+        name: 'Hayashi Lunch'
     },
     {
         id: 4,
-        name: 'Menu Item 4'
+        name: 'Sushi Bar Entrees'
     },
     {
         id: 5,
-        name: 'Menu Item 5'
+        name: 'Appetizers'
     },
     {
         id: 6,
-        name: 'Menu Item 6'
+        name: 'Dinner Bento Box'
     },
     {
         id: 7,
-        name: 'Menu Item 7'
+        name: 'Asian Fusion Kitchen'
     },
     {
         id: 8,
-        name: 'Menu Item 8'
+        name: 'Teriyaki'
     },
     {
         id: 9,
-        name: 'Menu Item 9'
+        name: 'Hibachi'
     },
     {
         id: 10,
-        name: 'Menu Item 10'
+        name: 'Tempura'
+    },
+    {
+        id: 11,
+        name: 'Don Buri'
+    },
+    {
+        id: 12,
+        name: 'Pad Thai Noodles'
+    },
+    {
+        id: 13,
+        name: 'Japanese Fried Rice'
+    },
+    {
+        id: 14,
+        name: 'Japanese Noodles'
+    },
+    {
+        id: 15,
+        name: 'Party Platter'
+    },
+    {
+        id: 16,
+        name: 'Soup'
+    },
+    {
+        id: 17,
+        name: 'Salads'
+    },
+    {
+        id: 18,
+        name: 'Dessert'
+    },
+    {
+        id: 19,
+        name: 'Drink'
     },
 ]);
 
@@ -115,7 +181,7 @@ const setMenu = (id) => {
     justify-content: center;
     background-color: #123461;
     border-radius: 10px;
-    height: 50px;
+    height: 7em;
     width: 90%;
 }
 
@@ -123,7 +189,7 @@ const setMenu = (id) => {
     background-color: #F5F3EC;
     color: #123461;
     width: 150px;
-    height: 30px;
+    height: 3.5em;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -144,9 +210,23 @@ const setMenu = (id) => {
     transform: scale(1.03);
 }
 
-@media (max-width: 712px){
+@media (max-width: 1000px){
+    .content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .carouselMenu{
+        width: 100%;
+    }
+
+    .carouselMenu{
+        height: 100px;
+    }
+
     .menu-item{
         width: 90%;
+        font-size: 16px;
     }
 }
 </style>

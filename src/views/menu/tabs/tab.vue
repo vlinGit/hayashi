@@ -6,7 +6,7 @@
                 <p id="sectionTitle">{{ section.title }}</p>
                 <div v-for="item in section.items" :key="name" class="item">
                     <div class="itemHeader">
-                        <p id="itemName">{{ item.name }} -</p>
+                        <p id="itemName">{{ item.name }} <span v-if="item.price">-</span></p>
                         <p id="itemPrice">{{ item.price }}</p>
                     </div>
                     <p id="itemDescription">{{ item.description }}</p>
@@ -52,7 +52,7 @@ const props = defineProps({
     }
 
     #sectionTitle{
-        font-size: 2em;
+        font-size: 32px;
         margin-bottom: 0;
         font-weight: bold;
     }
@@ -60,7 +60,7 @@ const props = defineProps({
     .itemHeader{
         display: flex;
         gap: 0.625em;
-        font-size: 1.5em;
+        font-size: 24px;
     }
 
     #itemName, #itemPrice{
@@ -69,6 +69,22 @@ const props = defineProps({
 
     #itemDescription{
         margin-top: 0;
+        font-size: 16px;
     }
+}
+
+@media (max-width: 1000px){
+    .tab{
+        width: 100%;
+    }
+
+    .sections{
+        flex-direction: column;
+
+        .section{
+            width: 100%;
+        }
+    }
+
 }
 </style>

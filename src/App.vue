@@ -145,4 +145,17 @@ a:hover{
   z-index: -1;
   pointer-events: none;
 }
+
+@media (max-width: 440px){
+  .footer{
+    .content{
+      flex-direction: column;
+      gap: 10px;
+
+      .links{
+        gap: 5px;
+      }
+    }
+  }
+}
 </style>
