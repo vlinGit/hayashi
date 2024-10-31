@@ -21,7 +21,15 @@
   <RouterView />
 
   <div class="footer">
-    
+    <div class="content">
+      <a href="/">Hayashi</a>
+      <div class="links">
+        <a href="/menu">Menu</a>
+        <a href="/order#mapTag">Location</a>
+        <a href="/order#ordersTag">Contact</a>
+        <a href="/order#hoursTag">Hours</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,9 +39,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import border from '@/assets/borders.svg'
 
 const onScroll = () => {
-  console.log("scrolled")
   const wrapper = document.querySelector('.wrapper');
-  console.log(wrapper);
   if (window.scrollY > 0) {
     wrapper.classList.add('scrolled');
   } else {
@@ -107,7 +113,25 @@ a:hover{
 }
 
 .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+
+    .links{
+      display: flex;
+      gap: 20px;
+    }
+  }
   
+  p{
+    font-size: clamp(16px, 1.5em, 32px);
+  }
 }
 
 .footer::before{
@@ -118,5 +142,7 @@ a:hover{
   position: absolute;
   width: 100%;
   height: 100px;
+  z-index: -1;
+  pointer-events: none;
 }
 </style>

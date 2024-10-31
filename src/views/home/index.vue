@@ -48,7 +48,7 @@ import banner from '@/components/banner.vue'
     max-width: 951px;
     max-height: 632px;
     padding: clamp(50px, 6.25em, 100px);
-    border: 2px solid black;
+    border: 5px solid #123461;
 
     #text{
         display: flex;

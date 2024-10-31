@@ -37,12 +37,35 @@
   font-style: italic;
 }
 
+:root{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DM Sans';
   font-weight: normal;
   font-size: 16px;
   margin: 0 auto;
   color: #f5f3ec;
+  background-color: #f5f3ec;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.1s linear;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s linear;
+}
+
+.slide-fade-enter-from{
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to{
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
 @media (max-width: 1600px) {
@@ -62,3 +85,4 @@ body {
     font-size: clamp(5px, 1.5vw, 8px);
   }
 }
+

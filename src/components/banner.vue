@@ -87,5 +87,6 @@ const bgImage = `url(${props.imagePath})`;
 .border{
     width: 100%;
     overflow: hidden;
+    pointer-events: none;
 }
 </style>
