@@ -11,6 +11,16 @@
                 </div>
             </div>
         </div>
+        <div class="contents">
+            <div id="cardInfo">
+                <div id="text">
+                    <h2>Reservations</h2>
+                    <p>Have a special event coming up? A big gathering of sorts? We'd be happy to host.</p>
+                    <p>Our cozy setting, large menu, and attentive staff will create the perfect backdrop for any occasion. Just give us a call and we can setup a spot just for you.</p>
+                </div>
+            </div>
+            <div id="closeuptuna"></div>
+        </div>
     </div>
 </template>
 
@@ -20,8 +30,11 @@ import banner from '@/components/banner.vue'
 
 <style scoped>
 .container{
+    display: flex;
+    flex-direction: column;
     color: #123461;
     padding: 6.25em;
+    gap: 2em;
 }
 
 .contents{
@@ -39,11 +52,18 @@ import banner from '@/components/banner.vue'
     background-position: center;
 }
 
+#closeuptuna{
+    width: 40%;
+    background-image: url('src/assets/closeuptuna.png');
+    background-size: cover;
+    background-position: center;
+}
+
 #cardInfo{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
     height: fit-content;
     max-width: 951px;
     max-height: 632px;
@@ -73,9 +93,13 @@ import banner from '@/components/banner.vue'
     #sushiPlate{
         display: none;
     }
+
+    #closeuptuna{
+        display: none;
+    }
     
     #cardInfo{
-        width: 70%;
+        width: 100%;
     }
 }
 </style>

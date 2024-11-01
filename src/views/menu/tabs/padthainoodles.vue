@@ -1,5 +1,5 @@
 <template>
-    <tab title="" :sections="sections"/>
+    <tab title="Pad Thai Noodles" :sections="sections"/>
 </template>
 
 <script setup>
@@ -10,9 +10,9 @@ const sections = [
         title: '',
         items: [
             {
-                name: '',
-                description: '',
-                price: ''
+                name: 'Chicken / Beef / Seafood / Duck',
+                description: 'Famous Thai stir fried noodles w. egg, mixed vegetables, scallion & ground peanut',
+                price: '14/16/18/18'
             }
         ]
     }
