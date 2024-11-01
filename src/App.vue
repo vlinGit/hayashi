@@ -6,8 +6,8 @@
           2901 Ocean Ave, Brooklyn, NY 11235
         </a>
         |
-        <a href="tel:718-368-3669" id="phoneNumber">
-          718-368-3669
+        <a href="tel:718-368-3668" id="phoneNumber">
+          718-368-3668
         </a>
       </div>
       <nav>
