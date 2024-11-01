@@ -8,8 +8,8 @@
                     6 Days A Week | Closed Monday<br>
                     Tuesday-Thursday: 11:30AM - 10:30PM<br>
                     Friday: 11:30AM - 11PM<br>
-                    Saturday: 12AM - 11PM<br>
-                    Sunday: 12AM - 10:30PM<br>
+                    Saturday: 11:30AM - 11PM<br>
+                    Sunday: 11:30AM - 10:30PM<br>
                 </p>
             </div>
             <div class="box" id="ordersTag">
