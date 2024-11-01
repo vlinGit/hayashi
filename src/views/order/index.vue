@@ -1,5 +1,5 @@
 <template>
-    <banner title="Order" subtitle="" imagePath="src/assets/orderBanner.png"/>
+    <banner title="Order" subtitle="" :imagePath="orderBanner"/>
     <div class="content">
         <div class="info">
             <div class="box" id="hoursTag">
@@ -35,6 +35,7 @@
 
 <script setup>
 import banner from '@/components/banner.vue'
+import orderBanner from '@/assets/orderBanner.png'
 import delivery from '@/assets/delivery.png'
 import grubhub from '@/assets/grubhub.png'
 import doordash from '@/assets/doordash.png'

@@ -1,8 +1,8 @@
 <template>
-    <banner title="Hayashi" subtitle="Japanese Fusion" imagePath="src/assets/homeBanner.png"/>
+    <banner title="Hayashi" subtitle="Japanese Fusion" :imagePath="homeBanner"/>
     <div class="container">
         <div class="contents">
-            <div id="sushiPlate"></div>
+            <div id="sushiPlate" :style="{ backgroundImage: `url(${sushiPlate})` }"></div>
             <div id="cardInfo">
                 <div id="text">
                     <h2>Our Offerings</h2>
@@ -19,13 +19,16 @@
                     <p>Our cozy setting, large menu, and attentive staff will create the perfect backdrop for any occasion. Just give us a call and we can setup a spot just for you.</p>
                 </div>
             </div>
-            <div id="closeuptuna"></div>
+            <div id="closeuptuna" :style="{ backgroundImage: `url(${closeuptuna})` }"></div>
         </div>
     </div>
 </template>
 
 <script setup>
 import banner from '@/components/banner.vue'
+import homeBanner from '@/assets/homeBanner.png'
+import sushiPlate from '@/assets/platesOfSushi.png'
+import closeuptuna from '@/assets/closeuptuna.png'
 </script>
 
 <style scoped>
@@ -47,14 +50,12 @@ import banner from '@/components/banner.vue'
 
 #sushiPlate{
     width: 40%;
-    background-image: url('src/assets/platesOfSushi.png');
     background-size: cover;
     background-position: center;
 }
 
 #closeuptuna{
     width: 40%;
-    background-image: url('src/assets/closeuptuna.png');
     background-size: cover;
     background-position: center;
 }

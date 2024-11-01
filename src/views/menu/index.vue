@@ -1,5 +1,5 @@
 <template>
-    <banner title="Menu" subtitle="Taste the East" imagePath="src/assets/menuBanner.png"/>
+    <banner title="Menu" subtitle="Taste the East" :imagePath="menuBanner"/>
     <div class="content">
         <Carousel class="carouselMenu" :value="menus" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
@@ -35,6 +35,7 @@
 
 <script setup>
 import banner from '@/components/banner.vue';
+import menuBanner from '@/assets/menuBanner.png';
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 import appetizers from '@/views/menu/tabs/appetizers.vue';
