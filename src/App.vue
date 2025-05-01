@@ -24,10 +24,10 @@
     <div class="content">
       <a href="/">Hayashi</a>
       <div class="links">
-        <a href="/menu">Menu</a>
-        <a href="/order#mapTag">Location</a>
-        <a href="/order#ordersTag">Contact</a>
-        <a href="/order#hoursTag">Hours</a>
+        <a href="/hayashi/#/menu">Menu</a>
+        <a href="/hayashi/#/order">Location</a>
+        <a href="/hayashi/#/order">Contact</a>
+        <a href="/hayashi/#/order">Hours</a>
       </div>
     </div>
   </div>
